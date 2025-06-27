@@ -1,3 +1,6 @@
+/* styles/globals.css */
+@import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,7 +21,6 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,8 +28,6 @@ body {
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -35,8 +35,34 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.footer {
+  grid-row-start: 3;
+  display: flex;
+  gap: 24px;
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer img {
+  flex-shrink: 0;
+}
+
+.inner {
+  max-width: 1620px;
+  margin: auto;
+  padding: 0 16px;
+}
+.page {
+  display: flex;
+  justify-content: space-between;
+}
+.main {
+  width: calc(100% - 256px);
+  padding: 24px;
+  background-color: #edf1f5;
+  height: 100vh;
 }
